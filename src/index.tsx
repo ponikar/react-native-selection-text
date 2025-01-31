@@ -2,7 +2,7 @@ import {
   requireNativeComponent,
   UIManager,
   Platform,
-  type ViewStyle,
+  type TextProps,
 } from 'react-native';
 
 const LINKING_ERROR =
@@ -11,10 +11,19 @@ const LINKING_ERROR =
   '- You rebuilt the app after installing the package\n' +
   '- You are not using Expo Go\n';
 
-type SelectionTextProps = {
-  color: string;
-  style: ViewStyle;
-};
+interface SelectionTextProps extends TextProps {
+  onTextSelected: (p: {
+    nativeEvent: {
+      selectedText: 'SOMETHING';
+      dismissed: false;
+      x: 286.02734375;
+      y: 12.111328125;
+      target: 2;
+    };
+  }) => void;
+
+  text: string;
+}
 
 const ComponentName = 'SelectionTextView';
 
