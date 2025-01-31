@@ -4,7 +4,14 @@ import { SelectionTextView } from 'react-native-selection-text';
 export default function App() {
   return (
     <View style={styles.container}>
-      <SelectionTextView color="#32a852" style={styles.box} />
+      <SelectionTextView
+        text="LOL! YOU STILL THINK SOMETHING IS EVEN REAL THAN EVER YOU CAN THINK??? I DO NOT THINK SO BROTER"
+        style={styles.box}
+        onTextSelected={(e) => {
+          console.log('PLEASE WORK I AM DONE WITH YOU', e.nativeEvent);
+        }}
+        selectable
+      />
     </View>
   );
 }
@@ -12,12 +19,10 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+    flex: 1,
+    fontSize: 20,
+    color: 'red',
   },
 });
