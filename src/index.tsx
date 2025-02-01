@@ -14,11 +14,10 @@ const LINKING_ERROR =
 interface SelectionTextProps extends TextProps {
   onTextSelected: (p: {
     nativeEvent: {
-      selectedText: 'SOMETHING';
-      dismissed: false;
-      x: 286.02734375;
-      y: 12.111328125;
-      target: 2;
+      selectedText: string;
+      dismissed: boolean;
+      x: number;
+      y: number;
     };
   }) => void;
 
