@@ -1,6 +1,6 @@
 {
   "name": "react-native-selection-text",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "lol",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
